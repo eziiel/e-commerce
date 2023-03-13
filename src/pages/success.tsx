@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Stripe from "stripe";
 import { stripe } from "../lib/stripe";
-import { SuccessContainer, SuccessImage } from "../styles/pages/success";
+import { SuccessContainer, SuccessImage, SuccessImageContainer } from "../styles/pages/success";
 
 interface PropsItemsSuccess {
   product : {
     customerName: string
-    name: string
-    imageUrl: string
+    // name: string
+    imageUrl: string[]
   }
 }
 export default function Success({ product }:PropsItemsSuccess) {
@@ -24,14 +24,17 @@ export default function Success({ product }:PropsItemsSuccess) {
     <SuccessContainer>
       <h1>Compra efetuada!</h1>
 
-        <SuccessImage>
-          <Image src={product.imageUrl} alt='' width={130} height={145}/>
-        </SuccessImage>
+        <SuccessImageContainer>
+          {product.imageUrl.map((item) => (
+            <SuccessImage key={item}>
+              <Image src={item} alt='' width={110} height={120}/>
+            </SuccessImage>
+          ))}
+        </SuccessImageContainer>
 
         <p>
-          Uhuul! <strong>{product.customerName}</strong>, sua 
-          <strong>{product.name}</strong> já está
-          a caminho de sua casa
+          Uhuul! <strong>{product.customerName}</strong>, sua compra está a
+          caminho de sua casa
         </p>
 
       <Link href='/' passHref legacyBehavior>
@@ -63,6 +66,13 @@ export const getServerSideProps: GetServerSideProps = async ({ query, params}) =
     expand: ['line_items','line_items.data.price.product']
   })
 
+  const items = session.line_items!.data.map(item => {
+    let product = item.price?.product as Stripe.Product
+    return product.images[0]
+  })
+
+  // console.log(items)
+
   const customerName = session.customer_details?.name
   const product = session.line_items!.data[0].price?.product as Stripe.Product
 
@@ -70,8 +80,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query, params}) =
     props: {
       product: {
         customerName,
-        name: product.name,
-        imageUrl: product.images[0]
+        imageUrl: items
       }
     }
   } 

@@ -7,6 +7,7 @@ export const ProductContainer = styled('main',{
   gap: '4rem',
 
   maxWidth: '1189px',
+  // maxWidth: 'calc(100vw - ((100vw - 1180px)/2))',
   margin: '0 auto',
 })
 

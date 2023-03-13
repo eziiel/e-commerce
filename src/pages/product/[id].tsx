@@ -1,3 +1,4 @@
+import { ContextItems } from '@/src/context'
 import { stripe } from '@/src/lib/stripe'
 import { ProductContainer, ProductImage, ProductInfo } from '@/src/styles/pages/product'
 import axios from 'axios'
@@ -22,34 +23,15 @@ interface ProductsProps {
 
 export default function Product({ product }: ProductsProps) {
   const [ isCreatingCheckoutSession, setIsCreatingCheckoutSession] = React.useState(false)
+  const { setItemsCart, items } = React.useContext(ContextItems)
+
   const { isFallback } = useRouter()
   if(isFallback) {
     return <p> Loading...</p>
   }
-  
-  const handleBuyProduct = async () => {
-    // const router = useRouter()
 
-    try {
-      setIsCreatingCheckoutSession(true)
-      const response = await axios.post('/api/checkout', {
-        
-        priceId: product.defaultPriceId
-      })
-
-      const { checkoutURL } = response.data
-
-      console.log(checkoutURL)
-      
-      //redirect to internal URL
-        // router.push(checkoutURL)
-      //redirect to external URL
-      window.location.href = checkoutURL
-    } catch (error) {
-      //conectar com alguma ferramente da observabilidade (Datadog, Sentry)
-      alert('falha em realizar compra')
-      setIsCreatingCheckoutSession(false)
-    }
+  const handleCartItems = (item:ProductsProps) => {
+    setItemsCart(item)
   }
   
   return (
@@ -67,10 +49,9 @@ export default function Product({ product }: ProductsProps) {
 
         <p>{product.description}</p>
         <button 
-          disabled={isCreatingCheckoutSession}
-          onClick={handleBuyProduct}
-          >
-        comprar agora</button>
+          onClick={() => handleCartItems({product})}
+        >
+          Adicionar na sacola</button>
       </ProductInfo>
     </ProductContainer>
     </>
