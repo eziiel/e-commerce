@@ -44,7 +44,6 @@ export const SuccessImageContainer = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   marginLeft: '10%',
-  background: 'red'
 })
 
 export const SuccessImage = styled('div', {
