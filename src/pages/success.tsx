@@ -15,6 +15,7 @@ interface PropsItemsSuccess {
 }
 export default function Success({ product }:PropsItemsSuccess) {
 
+
   return (
     <>
     <Head>
@@ -73,13 +74,12 @@ export const getServerSideProps: GetServerSideProps = async ({ query, params}) =
   
   
   const customerName = session.customer_details?.name
-  const products = session.line_items!.data[0].price?.product as Stripe.Product
-  
+
   return {
     props: {
       product: {
         customerName,
-        imageUrl: products
+        imageUrl: items
       }
     }
   } 
