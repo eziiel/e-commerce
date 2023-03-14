@@ -54,14 +54,16 @@ export const CartShop = ({ product }: ProductsProps) => {
         <Dialog.Title>Sacola de pedidos</Dialog.Title>
           <FormCart>
             <FormCartProducts>
-              {items.length > 0 && items.map((item) =>(
+              {items.length > 0 ? items.map((item) =>(
                 <ItemCart 
                   key={item.product.id}
                   name={item.product.name}
                   price={item.product.price}
                   img={item.product.imgUrl}
                   />
-              ))}
+              )):
+                <p>carrinho vazio</p>
+            }
             </FormCartProducts>
 
             <FormCartFooter>

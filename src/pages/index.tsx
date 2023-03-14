@@ -25,10 +25,18 @@ interface ProductsProps {
 
 export default function Home({ product }: ProductsProps ) {
   const [ sliderRef ] = useKeenSlider({
+    breakpoints: {
+      '(min-width: -500px)': {
+        slides: {
+          perView: 1,
+          spacing: 48,
+        }
+      }
+    },
     slides: {
-      perView: 3,
-      spacing: 48
-    }
+      perView: 1.7,
+      spacing: 48,
+    },
   })
 
   const { setItemsCart, items } = React.useContext( ContextItems )

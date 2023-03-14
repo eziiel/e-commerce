@@ -1,24 +1,2 @@
-  // const handleBuyProduct = async () => {
-  //   // const router = useRouter()
+reponsiveness
 
-  //   try {
-  //     setIsCreatingCheckoutSession(true)
-  //     const response = await axios.post('/api/checkout', {
-        
-  //       priceId: product.defaultPriceId
-  //     })
-
-  //     const { checkoutURL } = response.data
-
-  //     console.log(checkoutURL)
-      
-  //     //redirect to internal URL
-  //       // router.push(checkoutURL)
-  //     //redirect to external URL
-  //     window.location.href = checkoutURL
-  //   } catch (error) {
-  //     //conectar com alguma ferramente da observabilidade (Datadog, Sentry)
-  //     alert('falha em realizar compra')
-  //     setIsCreatingCheckoutSession(false)
-  //   }
-  // }

@@ -13,7 +13,7 @@ export const Toggle = styled('div', {
   cursor: 'pointer',
   position: 'relative',
 
-  
+  marginRight: '1rem'  
 })
 
 export const AmountSpan = styled('div', {

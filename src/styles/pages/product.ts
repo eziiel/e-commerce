@@ -4,11 +4,17 @@ export const ProductContainer = styled('main',{
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
   alignItems: 'stretch',
+  justifyContent: 'center',
+  alignContent: 'center',
   gap: '4rem',
 
   maxWidth: '1189px',
   // maxWidth: 'calc(100vw - ((100vw - 1180px)/2))',
   margin: '0 auto',
+  padding: '1rem',
+  '@media(max-width: 650px)':{
+    gridTemplateColumns: '1fr',
+  },
 })
 
 export const ProductImage = styled('div',{
@@ -21,9 +27,21 @@ export const ProductImage = styled('div',{
 
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'center',
 
+  backgroundColor: 'blue',
+
+  '@media(max-width: 650px)':{
+    maxWidth: 300,
+    height: 250,
+  },
   img: {
     objectFit: 'cover',
+    '@media(max-width: 650px)':{
+      maxWidth: 300,
+      height: 250,
+    },
+    
   },
 })
 
@@ -69,6 +87,9 @@ export const ProductInfo = styled('div',{
     
     '&:not(:disabled):hover': { 
       background: '$green300'
-    }	
+    },	
+    '@media(max-width: 650px)':{
+      marginTop: '1rem',
+    },
   }
 })

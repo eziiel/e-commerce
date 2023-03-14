@@ -8,6 +8,23 @@ export const HomeContainer = styled('main', {
   marginLeft: 'auto',
   maxWidth: 'calc(100vw - ((100vw - 1180px)/2))',
   minHeight: 656,
+  
+  '@media(max-width: 1250px)':{
+    // maxWidth: 'calc(100vw - ((100vw - 90px)/2))',
+    // minHeight: 456,
+  },
+  // '@media(max-width: 1090px)':{
+  //   maxWidth: 'calc(100vw - ((100vw - 650px)/2))',
+  //   minHeight: 256,
+  //   background: 'red',
+  // },
+  // '@media(max-width: 690px)':{
+  //   maxWidth: 'calc(100vw - ((100vw - 350px)/2))',
+  //   // flexDirection: 'column',
+  //   // gap: '2rem',
+  //   // alignItems: 'start',
+  //   // justifyContent: 'center'
+  // }
 }) 
 
 export const Product = styled('div', {
@@ -24,7 +41,15 @@ export const Product = styled('div', {
 
   img: {
     objectFit: 'cover',
-},
+  },
+  
+  '@media(max-width: 690px)':{
+    height: '300px',
+    minWidth: '200px !important',
+    img: {
+      objectFit: 'center',
+    },
+  },
 
   footer:{
     position: 'absolute',
