@@ -24,7 +24,6 @@ export const CartShop = ({ product }: ProductsProps) => {
   const [ isCreatingCheckoutSession, setIsCreatingCheckoutSession] = React.useState(false)
  
   const handleBuyProduct = async () => {
-
     // const router = useRouter()
     try {
       setIsCreatingCheckoutSession(true)
