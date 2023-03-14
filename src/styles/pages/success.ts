@@ -43,7 +43,8 @@ export const SuccessImageContainer = styled('div', {
   width: '100px',
   alignItems: 'center',
   justifyContent: 'center',
-  marginLeft: '10%'
+  marginLeft: '10%',
+  background: 'red'
 })
 
 export const SuccessImage = styled('div', {
