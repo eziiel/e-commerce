@@ -71,6 +71,18 @@ export const Product = styled('div', {
     transition: 'all 0.2s ease-in-out',
     opacity: 0,
 
+    '@media(max-width: 600px)':{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
+
+      botton: {
+        widht: '300px !important'
+      }
+    },
+
     strong : {
       fontSize: '$lg',
       color: '$gray100',

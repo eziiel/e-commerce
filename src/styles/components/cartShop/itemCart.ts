@@ -16,7 +16,14 @@ export const ItemCartShop = styled('li', {
   },
 
   span :{
-  }
+  },
+
+  '@media(max-width: 600px)':{
+    strong: {
+      fontSize: '$ls',
+    },
+  },
+  
 })
 
 export const ItemCartShopinfo = styled('div', {

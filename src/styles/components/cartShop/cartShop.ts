@@ -7,11 +7,13 @@ export const CartShopOverlay = styled (Dialog.Overlay, {
   height: '100vh',
   inset: 0,
   background: 'rgba(0,0,0,0.3)',
+  // background: 'red',
 
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   border: 'none',
+
   
 }) 
 
@@ -29,7 +31,12 @@ export const CartShopContent = styled(Dialog.Content, {
   background: '$gray800',
   border: 'none',
 
-  padding: '5rem 3rem 5rem 3rem'  
+  padding: '5rem 3rem 5rem 3rem',
+
+  '@media(max-width: 600px)':{
+    width: '80%',
+    padding: '2rem',
+  },
 }) 
 
 export const FormCart = styled('div', {
@@ -48,7 +55,11 @@ export const FormCartProducts = styled('ul', {
   
   listStyle: 'none',
   maxHeight: '600px',
-
+  
+  '@media(max-width: 600px)':{
+    gap: '0.5rem',
+    maxHeight: '550px',
+  },
 })
 
 export const FormCartFooter = styled('footer', {
@@ -68,6 +79,10 @@ export const FormCartFooter = styled('footer', {
     fontSize: '$md',   
     width: '100%',
     
+    '@media(max-width: 600px)':{
+      marginTop: '1rem',
+    },
+
     '&:disabled': {
       opacity: 0.6,
       cursor: 'not-allowed',
@@ -87,9 +102,10 @@ export const FormCartFooterInfo = styled('div', {
   div: {
     display: 'flex',
     justifyContent: 'space-between',
+    fontSize: '$ls',
   },
 })
 
 export const ValuesInfo = styled('div', {
-  fontSize: '$lg',
+  fontSize: '$md !important',
 })
