@@ -44,6 +44,10 @@ export const SuccessImageContainer = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   marginLeft: '10%',
+  
+  '@media(max-width: 600px)':{
+    marginLeft: '15%',
+  }
 })
 
 export const SuccessImage = styled('div', {
