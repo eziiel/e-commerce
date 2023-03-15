@@ -78,7 +78,6 @@ export const FormCartFooter = styled('footer', {
     fontWeight: 'bold',
     fontSize: '$md',   
     width: '100%',
-    marginBottom: '2rem',
     
     '@media(max-width: 600px)':{
       marginTop: '1rem',
