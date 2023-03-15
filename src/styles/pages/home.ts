@@ -2,13 +2,12 @@ import { styled } from "..";
 
 export const HomeContainer = styled('main', {
   display: 'flex',
-  // gap: '3rem',
   
   width: '100%',
   marginLeft: 'auto',
   maxWidth: 'calc(100vw - ((100vw - 1180px)/2))',
   minHeight: 656,
-  
+
   '@media(max-width: 1250px)':{
     maxWidth: 'calc(100vw - ((100vw - 900px)/2))',
     minHeight: 456,
@@ -18,7 +17,19 @@ export const HomeContainer = styled('main', {
     minHeight: 256,
   },
   '@media(max-width: 690px)':{
-    maxWidth: 'calc(100vw - ((100vw - 150px)/2))',
+    maxWidth: 'calc(100vw - ((100vw - 575px)))',
+    // maxidth: '100px',
+  },
+  '@media(max-width: 560px)':{
+    maxWidth: 'calc(100vw - ((100vw - 475px)))',
+  },
+  '@media(max-width: 490px)':{
+    maxWidth: 'calc(100vw - ((100vw - 375px)))',
+  },
+  '@media(max-width: 390px)':{
+    // maxWidth: 'calc(100vw - ((100vw - 350px)))',
+    marginLeft: '2rem',
+    
   }
 }) 
 
@@ -39,7 +50,7 @@ export const Product = styled('div', {
   
   '@media(max-width: 560px)':{
     height: '300px',
-    minWidth: '200px !important',
+    minWidth: '200px ',
     img: {
       objectFit: 'center',
       width: 300,
