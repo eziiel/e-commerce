@@ -81,6 +81,10 @@ export const FormCartFooter = styled('footer', {
       marginTop: '1rem',
     },
 
+    '@media(max-width: 400px)':{
+      marginBottom: '5rem',
+    },
+
     '&:disabled': {
       opacity: 0.6,
       cursor: 'not-allowed',

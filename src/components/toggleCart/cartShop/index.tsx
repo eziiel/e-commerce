@@ -45,6 +45,8 @@ export const CartShop = ({ product }: ProductsProps) => {
     }
   }
   
+  const disableButton = items.length <= 0
+
   return (
     <Dialog.Portal>
       <CartShopOverlay />
@@ -76,7 +78,9 @@ export const CartShop = ({ product }: ProductsProps) => {
                   <span>{total}</span>
                 </ValuesInfo>
               </FormCartFooterInfo>
-              <button onClick={handleBuyProduct}>
+              <button 
+                disabled= {disableButton}
+                onClick={handleBuyProduct}>
                 Finalizar pedido 
               </button>
             </FormCartFooter>
