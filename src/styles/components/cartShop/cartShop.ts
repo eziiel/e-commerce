@@ -8,13 +8,11 @@ export const CartShopOverlay = styled (Dialog.Overlay, {
   inset: 0,
   background: 'rgba(0,0,0,0.3)',
   // background: 'red',
-
+  
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   border: 'none',
-
-  
 }) 
 
 export const CartShopContent = styled(Dialog.Content, {
