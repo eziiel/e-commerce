@@ -10,28 +10,22 @@ export const HomeContainer = styled('main', {
   minHeight: 656,
   
   '@media(max-width: 1250px)':{
-    // maxWidth: 'calc(100vw - ((100vw - 90px)/2))',
-    // minHeight: 456,
+    maxWidth: 'calc(100vw - ((100vw - 900px)/2))',
+    minHeight: 456,
   },
-  // '@media(max-width: 1090px)':{
-  //   maxWidth: 'calc(100vw - ((100vw - 650px)/2))',
-  //   minHeight: 256,
-  //   background: 'red',
-  // },
-  // '@media(max-width: 690px)':{
-  //   maxWidth: 'calc(100vw - ((100vw - 350px)/2))',
-  //   // flexDirection: 'column',
-  //   // gap: '2rem',
-  //   // alignItems: 'start',
-  //   // justifyContent: 'center'
-  // }
+  '@media(max-width: 1090px)':{
+    maxWidth: 'calc(100vw - ((100vw - 650px)/2))',
+    minHeight: 256,
+  },
+  '@media(max-width: 690px)':{
+    maxWidth: 'calc(100vw - ((100vw - 250px)/2))',
+  }
 }) 
 
 export const Product = styled('div', {
   background: 'linear-gradient(180deg, #1ea483 0%, #7465e4 100%);',
   borderRadius: '8px',
   cursor: 'pointer',
-  // padding: '0.25rem',
 
   position: 'relative',
   display: 'flex',
@@ -43,11 +37,13 @@ export const Product = styled('div', {
     objectFit: 'cover',
   },
   
-  '@media(max-width: 690px)':{
+  '@media(max-width: 560px)':{
     height: '300px',
     minWidth: '200px !important',
     img: {
       objectFit: 'center',
+      width: 300,
+      height: 300
     },
   },
 
@@ -77,6 +73,11 @@ export const Product = styled('div', {
       alignItems: 'center',
       justifyContent: 'center',
       textAlign: 'center',
+      padding: '1rem',
+
+      // strong : {
+      //   fontSize: '$ls',
+      // },
 
       botton: {
         widht: '300px !important'
@@ -86,7 +87,11 @@ export const Product = styled('div', {
     strong : {
       fontSize: '$lg',
       color: '$gray100',
-      gridColum: 1
+      gridColum: 1,
+      
+      '@media(max-width: 600px)':{
+        fontSize: '$ls',
+      } 
     },
     
     span : {
@@ -95,6 +100,9 @@ export const Product = styled('div', {
       color: '$green300',
       gridColum: 1,
       gridRow: 2,
+      '@media(max-width: 600px)':{
+        fontSize: '$md',
+      } 
     },
     
     button : {

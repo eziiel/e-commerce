@@ -1,2 +1,23 @@
 reponsiveness
 
+e-commerce
+
+Que projeto bom. Feito com NextJS simula um e-commerce com a API do stripe (plataforma de pagamento).
+
+Gostei bastante pois pude aprender conceitos de Next que não tinha visto antes, apliquei a ferramenta do radix-ui para o carrinho de produtos e para a estilização. Futuramente quero melhorar ainda mais com outros produtos.
+
+PS-->>> para parte do pagamento utilizar o cartão: 4242 4242 4242 4242 funciona como teste, e-mail, senha e data de validade pode ser qualquer um.🚀🔧
+
+gitHub: https://lnkd.in/e3WZq-Hq
+Vercel: https://lnkd.in/e3Zzec99
+
+vou revisar ele para realizar mais algumas melhorias 🤣
+
+#Rocketseat
+#TypeScript
+#radixUi
+#NextJs
+#Stitches
+#axios
+#github
+#stripe
