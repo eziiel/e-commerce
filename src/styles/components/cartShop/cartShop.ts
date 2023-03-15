@@ -38,6 +38,7 @@ export const CartShopContent = styled(Dialog.Content, {
   },
   '@media(max-width: 400px)':{
     gap: '0.875rem',
+    padding: '0.875rem 1rem auto 1rem',
   },
 }) 
 
