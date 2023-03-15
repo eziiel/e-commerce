@@ -34,6 +34,10 @@ export const CartShopContent = styled(Dialog.Content, {
   '@media(max-width: 600px)':{
     width: '80%',
     padding: '1rem',
+    gap: '1rem',
+  },
+  '@media(max-width: 400px)':{
+    gap: '0.875rem',
   },
 }) 
 
@@ -56,7 +60,7 @@ export const FormCartProducts = styled('ul', {
   
   '@media(max-width: 600px)':{
     gap: '0.5rem',
-    maxHeight: '500px',
+    // maxHeight: '500px',
   },
 })
 
