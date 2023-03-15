@@ -59,7 +59,6 @@ export const FormCartProducts = styled('ul', {
   '@media(max-width: 600px)':{
     gap: '0.5rem',
     maxHeight: '500px',
-    background: 'red'
   },
 })
 

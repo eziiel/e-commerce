@@ -25,17 +25,17 @@ interface ProductsProps {
 
 export default function Home({ product }: ProductsProps ) {
   const [ sliderRef ] = useKeenSlider({
+    slides: {
+      perView: 1.8,
+      spacing: 48,
+    },
     breakpoints: {
-      '(min-width: -500px)': {
+      '(max-width: 500px)': {
         slides: {
-          perView: 1,
-          spacing: 48,
+          perView: 1.2,
+          spacing: 36,
         }
       }
-    },
-    slides: {
-      perView: 1.7,
-      spacing: 48,
     },
   })
 

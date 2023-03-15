@@ -18,7 +18,7 @@ export const HomeContainer = styled('main', {
     minHeight: 256,
   },
   '@media(max-width: 690px)':{
-    maxWidth: 'calc(100vw - ((100vw - 250px)/2))',
+    maxWidth: 'calc(100vw - ((100vw - 150px)/2))',
   }
 }) 
 

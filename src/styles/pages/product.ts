@@ -13,7 +13,11 @@ export const ProductContainer = styled('main',{
   margin: '0 auto',
   padding: '1rem',
   '@media(max-width: 650px)':{
-    gridTemplateColumns: '1fr',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+
   },
 })
 
@@ -28,8 +32,6 @@ export const ProductImage = styled('div',{
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-
-  backgroundColor: 'blue',
 
   '@media(max-width: 650px)':{
     maxWidth: 300,
